@@ -51,11 +51,18 @@ if test "$PHP_EBPF" != "no"; then
   )
   BCC_C_SOURCE="$LIB_BCC/src/cc"
   PHP_ADD_INCLUDE($BCC_C_SOURCE)
-  dnl AC_ARG_WITH([ebpf],
-  dnl [AS_HELP_STRING([--with-llvm=DIR], [Specify the path to llvm headers and libraries])],
-  dnl [LIB_LLVM="$withval"],
-  dnl [LIB_LLVM="/usr/lib/llvm-14"]
-  dnl )
+  AC_ARG_WITH([llvm],
+   [AS_HELP_STRING([--with-llvm=DIR], [Specify the path to llvm headers and libraries])],
+   [LIB_LLVM="$withval"],
+   [LIB_LLVM="/usr/lib/llvm-14"]
+  )
+
+  CPPFLAGS="$CPPFLAGS -I$LIB_LLVM/include"
+
+  AC_CHECK_HEADER([llvm/Config/llvm-config.h], [], [
+    AC_MSG_ERROR([llvm/Config/llvm-config.h not found in $LIB_LLVM/include , Please install LLVM development headers, or specify the correct path with: --with-llvm=DIR (e.g. --with-llvm=/usr/lib/llvm-14) ])
+  ])
+
   PHP_ADD_INCLUDE($LIB_LLVM/include)
 
   dnl AC_ARG_WITH([ebpf],
