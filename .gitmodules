@@ -1,0 +1,3 @@
+[submodule "deps/bcc"]
+	path = deps/bcc
+	url = https://github.com/iovisor/bcc.git
