@@ -1,5 +1,5 @@
 # eBPF Observability for PHP
-**phbpf** is specifically designed for PHP, enabling the efficient creation of kernel-level tracing and manipulation programs in Linux systems. Centered around eBPF technology, it offers a rich set of tools and examples to empower PHP developers with robust kernel observability and dynamic instrumentation capabilities within their familiar ecosystem.
+**phbpf** is specifically designed for PHP, enabling the efficient creation of kernel-level tracing and manipulation programs in Linux systems. Centered around eBPF technology, it offers a rich set of tools and examples to empower PHP developers with robust kernel observability and dynamic instrumentation capabilities within their familiar ecosystem
 
 ## ✨ Features
 - Natively operate BPF programs with PHP scripts, ideal for rapid development and debugging of eBPF functionalities.
