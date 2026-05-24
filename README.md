@@ -1,6 +1,8 @@
 # eBPF Observability for PHP
 **phbpf** is specifically designed for PHP, enabling the efficient creation of kernel-level tracing and manipulation programs in Linux systems. Centered around eBPF technology, it offers a rich set of tools and examples to empower PHP developers with robust kernel observability and dynamic instrumentation capabilities within their familiar ecosystem
 
+![SeasPerf-Logo](https://raw.githubusercontent.com/SeasX/SeasPerf/main/SeasPerf-Logo.png)
+
 ## ✨ Features
 - Natively operate BPF programs with PHP scripts, ideal for rapid development and debugging of eBPF functionalities.
 - Adheres to bcc frontend usage patterns, allowing bcc tool projects to be implemented in PHP with minimal effort, including built-in examples.
